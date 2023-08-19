@@ -1,0 +1,42 @@
+data_dir:
+  SBU: '../../dataset/SBU-shadow/'
+  CUHK: '../../dataset/CUHKshadow'
+  UCF: '../../dataset/UCF-shadow/'
+  ISTD: '../../dataset/ISTD_Dataset/ISTD_Dataset/'
+  additional_dataset: '../../dataset/Additional-Data-selected/'
+
+pretrained_encoder_dir:
+  ResNeXt: '../SILT_v1/model/backbone/resnext/resnext_101_32x4d.pth'
+  efficientnet-b3: None
+  efficientnet-b7: None
+  convnext-small: None
+  convnext-base: None
+  PVT-b3: '../SILT_v1/model/backbone/PVT/pvt_v2_b3.pth'
+  PVT-b5: '../SILT_v1/model/backbone/PVT/pvt_v2_b5.pth'
+
+training_config:
+  round: 7
+
+  train:
+    save_mask_freq: 1000
+    total_epoch: 20
+    batch_size: 6
+    lr: 0.0001
+
+  refine:
+    correctness_threshold: 0.95
+    filter_threshold: 0.1
+    final_threshold_begin: 0.5
+    final_threshold_end: 0.6
+    crop: True
+    refine_resolution: 512
+    crop_size: 2
+
+  data:
+    augmentation_magnitude: 0.3
+    layers: 1
+    use_additional_dataset: True
+    data_augmentation: True
+    resolution: 512
+
+

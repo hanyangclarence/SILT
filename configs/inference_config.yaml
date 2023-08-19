@@ -1,0 +1,5 @@
+resolution: 512
+threshold_for_result: 0.7
+crop: True
+crop_size: 2
+filter_threshold: 0.1
