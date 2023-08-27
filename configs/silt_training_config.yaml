@@ -3,16 +3,16 @@ data_dir:
   CUHK: '../../dataset/CUHKshadow'
   UCF: '../../dataset/UCF-shadow/'
   ISTD: '../../dataset/ISTD_Dataset/ISTD_Dataset/'
-  additional_dataset: '../../dataset/Additional-Data-selected/'
+  additional_dataset: '../../dataset/Additional-Data/'
 
 pretrained_encoder_dir:
-  ResNeXt: '../SILT_v1/model/backbone/resnext/resnext_101_32x4d.pth'
+  ResNeXt: '../pretrained_backbone_weight/resnext_101_32x4d.pth'
   efficientnet-b3: None
   efficientnet-b7: None
   convnext-small: None
   convnext-base: None
-  PVT-b3: '../SILT_v1/model/backbone/PVT/pvt_v2_b3.pth'
-  PVT-b5: '../SILT_v1/model/backbone/PVT/pvt_v2_b5.pth'
+  PVT-b3: '../pretrained_backbone_weight/pvt_v2_b3.pth'
+  PVT-b5: '../pretrained_backbone_weight/pvt_v2_b5.pth'
 
 training_config:
   round: 7
@@ -35,7 +35,7 @@ training_config:
   data:
     augmentation_magnitude: 0.3
     layers: 1
-    use_additional_dataset: True
+    use_additional_dataset: True  # True only when training on SBU
     data_augmentation: True
     resolution: 512
 
