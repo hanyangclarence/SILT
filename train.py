@@ -226,7 +226,7 @@ if __name__ == '__main__':
         "--config",
         type=str,
         required=False,
-        default='/home/wangty/Projects/Shadow/shadow_detection/SILT/configs/silt_training_config.yaml',
+        default='configs/silt_training_config.yaml',
         help="The yaml file for the model's configuration",
     )
 
