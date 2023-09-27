@@ -4,7 +4,7 @@
 # SILT: Shadow-aware Iterative Label Tuning for Learning to Detect Shadows from Noisy Labels 
 
 [![Paper](http://img.shields.io/badge/paper-arxiv.2308.12064-B31B1B.svg)](https://arxiv.org/abs/2308.12064)
-[![Conference](http://img.shields.io/badge/ICCV-2023-4b44ce.svg)](https://arxiv.org/abs/2308.12064)
+[![Conference](http://img.shields.io/badge/ICCV-2023-4b44ce.svg)]([https://arxiv.org/abs/2308.12064](https://openaccess.thecvf.com/content/ICCV2023/html/Yang_SILT_Shadow-Aware_Iterative_Label_Tuning_for_Learning_to_Detect_Shadows_ICCV_2023_paper.html))
 
 ![image](https://github.com/Cralence/SILT/blob/main/assets/NL_pipeline.png)
 
