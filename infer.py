@@ -44,7 +44,6 @@ def main(args_from_parser):
     net = Network(
         input_resolution=args_model['training_config']['data']['resolution'],
         backbone=args_model['training_config']['backbone'],
-        backbone_ckpt=args_model['pretrained_encoder_dir'][args_model['training_config']['backbone']]
     ).cuda()
     net.load_state_dict(checkpoint['state_dict'])
 

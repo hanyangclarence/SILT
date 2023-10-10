@@ -5,7 +5,7 @@ from .resnext_101_32x4d_ import resnext_101_32x4d
 
 
 class ResNeXt101(nn.Module):
-    def __init__(self, backbone_path='/home/wangty/Projects/Shadow/shadow_detection/SILT/model/backbone/resnext/resnext_101_32x4d.pth'):
+    def __init__(self, backbone_path=None):
         super(ResNeXt101, self).__init__()
         net = resnext_101_32x4d
         if backbone_path is not None:

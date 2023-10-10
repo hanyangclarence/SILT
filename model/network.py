@@ -285,7 +285,8 @@ class Network(nn.Module):
             else:
                 ValueError('wrong pvt backbone')
 
-            self.encoder.load_state_dict(torch.load(backbone_ckpt))
+            if backbone_ckpt is not None:
+                self.encoder.load_state_dict(torch.load(backbone_ckpt))
 
             self.layer3_transposed_conv = nn.ConvTranspose2d(embed_dims[3], embed_dims[2], 2, 2)
             self.layer2_transposed_conv = nn.ConvTranspose2d(embed_dims[2], embed_dims[1], 2, 2)
